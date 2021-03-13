@@ -1,0 +1,48 @@
+{
+  "kind": "collectionType",
+  "collectionName": "resumes",
+  "info": {
+    "name": "resume"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "link": {
+      "type": "string"
+    },
+    "firm": {
+      "type": "string"
+    },
+    "job": {
+      "type": "string"
+    },
+    "started_at": {
+      "type": "date"
+    },
+    "ended_at": {
+      "type": "date"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "icons": {
+      "via": "resumes",
+      "collection": "icon",
+      "dominant": true
+    }
+  }
+}
