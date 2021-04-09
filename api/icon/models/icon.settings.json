@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "icons",
+  "info": {
+    "name": "icon",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "icon_name": {
+      "type": "string"
+    },
+    "link": {
+      "type": "string"
+    },
+    "kind": {
+      "type": "string"
+    },
+    "projects": {
+      "collection": "project",
+      "via": "icons"
+    },
+    "resumes": {
+      "collection": "resume",
+      "via": "icons"
+    }
+  }
+}
